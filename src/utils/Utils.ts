@@ -10,13 +10,13 @@ export function checkExists(startInterval: Array<any>, endInterval: Array<any>):
 }
 
 function findHour(initA: any, initB: Array<any>): boolean {
-
+  let findHourReturn = false;
   initB.forEach((element) => {
     if (initA.start == element.start && initA.end == element.end) {
-      return true;
+      findHourReturn = true;
     }
   });
-  return false;
+  return findHourReturn;
 }
 
 export function daysWeek(week1: Array<any>, week2: Array<any>): boolean {

@@ -5,6 +5,7 @@ const routes = Router();
 
 routes.get("/rules", RullesController.index);
 routes.post("/rules", RullesController.store);
+routes.delete("/rules", RullesController.delete);
 
 
 

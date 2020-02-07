@@ -7,7 +7,7 @@
 
 Utilizar o yarn ou npm
 
-<li>```usar o comando install```</li>
+<li> `usar o comando install` </li>
 
 ## Database
 
@@ -40,7 +40,7 @@ por exemplo
   "daysWeek": [],
   "intervals": [
     { "start": "14:30", "end": "15:20" },
-    { "start": "15:30", "end": "16:00" },
+    { "start": "15:30", "end": "16:00" }
   ]
 }
 ```
@@ -58,7 +58,7 @@ por exemplo
    {"day": "wednesday"},
 ],
  "intervals": [
-   { "start": "08:00", "end": "11:30" },
+   { "start": "08:00", "end": "11:30" }
  ]
 }
 ```
@@ -72,7 +72,7 @@ por exemplo
   "day": null,
   "daysWeek": [],
   "intervals": [
-    { "start": "13:30", "end": "14:00" },
+    { "start": "13:30", "end": "14:00" }
   ]
 }
 ```
@@ -90,7 +90,7 @@ Passar o mesmo conteudo do post no body da requisição
   "day": false,
   "daysWeek": [],
   "intervals": [
-    { "start": "13:30", "end": "14:00" },
+    { "start": "13:30", "end": "14:00" }
   ]
 }
 ```
@@ -98,3 +98,5 @@ Passar o mesmo conteudo do post no body da requisição
 ### Filtrar dados
 
 `localhost:3000/regras?start=10-01-2020&end=02-02-2020` GET
+
+### Obs Dentro da pasta PostMan a um Json que pode ser importado pra ser usado nessa ferramenta

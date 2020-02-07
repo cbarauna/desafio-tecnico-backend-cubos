@@ -244,7 +244,7 @@ class RegraController {
           dataResul.push(row);
           continue;
         } else if (
-          !util.daysWeek(body.daysWeek, row.daysWeek) ||
+          util.daysWeek(body.daysWeek, row.daysWeek) ||
           !util.checkExists(row.intervals, body.intervals)
         ) {
           dataResul.push(row);
@@ -260,7 +260,7 @@ class RegraController {
         if (err) {
           return res.status(400).json({
             msg:
-              "Algum erro inesperado aconteceu, aguarde um momento e tente novamente."
+              "Não foi possivel Deletar, reveja os paramentros e tente novamente"
           });
         }
 

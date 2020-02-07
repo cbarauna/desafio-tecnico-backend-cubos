@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "4653febe-5ebc-4f88-9aa2-1b27f17e15e4",
+		"name": "cubos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET-rules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3333/rules",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "Consultar regras cadastradas"
+			},
+			"response": []
+		},
+		{
+			"name": "POST-rulesDay",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"weekly\": [\r\n        {\r\n            \"Sunday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        },\r\n        {\r\n            \"Monday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        }, \r\n            {\r\n            \"Tuesday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/rules",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "Salva regra para um dia expecifico"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-rulesDay",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"weekly\": [\r\n        {\r\n            \"Sunday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        },\r\n        {\r\n            \"Monday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        }, \r\n            {\r\n            \"Tuesday\": {\r\n                \"start\": \"14:30\",\r\n                \"end\": \"18:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/rules",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"rules"
+					]
+				},
+				"description": "Deletar um regra"
+			},
+			"response": []
+		},
+		{
+			"name": "getDATE-RULES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
