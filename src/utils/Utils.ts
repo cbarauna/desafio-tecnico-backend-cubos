@@ -1,18 +1,43 @@
-import fs from "fs";
+export function checkExists(startInterval: Array<any>, endInterval: Array<any>): boolean {
+  let intervalReturn;
 
-module.exports = {
-  readFile(file: string) {
-    fs.readFile(file, "utf-8", (err, data) => {
-      if (err) {
-        if (err.code === "ENOENT") {
-          return {};
-        }
-        throw err;
-      }
+  startInterval.forEach(data => {
+    intervalReturn = findHour(data, endInterval);
 
-      let dataDb = JSON.parse(data);
+  })
 
-      return dataDb;
-    });
+  return intervalReturn;
+}
+
+function findHour(initA: any, initB: Array<any>): boolean {
+
+  initB.forEach((element) => {
+    if (initA.start == element.start && initA.end == element.end) {
+      return true;
+    }
+  });
+  return false;
+}
+
+export function daysWeek(week1: Array<any>, week2: Array<any>): boolean {
+  let weekReturn;
+  if (week2.length == 0) {
+    return false;
   }
-};
+
+  weekReturn = week2.map((el, i) => {
+    return el.day == week1[i].day
+  })
+
+  return weekReturn;
+}
+
+export function findWeek(el: any, value: string): boolean {
+
+  el.forEach(element => {
+    if (value == element.daysWeek.day) {
+      return true;
+    }
+  })
+  return false;
+}

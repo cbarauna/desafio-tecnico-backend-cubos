@@ -1,6 +1,3 @@
 {
-  "weekly": [
-    { "Sunday": { "start": "14:30", "end": "18:00" } },
-    { "Monday": { "start": "14:30", "end": "18:00" } }
-  ]
+  "regras": []
 }

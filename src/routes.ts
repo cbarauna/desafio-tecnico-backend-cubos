@@ -1,11 +1,11 @@
 import { Router } from "express";
-import DayController from "./controllers/DayController";
 import RullesController from "./controllers/RulesController";
-
 const routes = Router();
 
-routes.get("/", DayController.index);
+
 routes.get("/rules", RullesController.index);
-routes.post("/rules", RullesController.create);
+routes.post("/rules", RullesController.store);
+
+
 
 export default routes;
